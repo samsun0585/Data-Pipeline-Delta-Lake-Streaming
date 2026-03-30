@@ -1,3 +1,20 @@
+This assignment is about building a data pipeline using Delta Lake and Spark. First, we take a CSV file with employee data and load it into a Delta table. This helps convert raw data into a structured format that we can query and update easily.
+
+Then we check the data quality by finding missing values and duplicate rows to make sure the data is clean. After that, we define a schema so that the data types are fixed, and Delta Lake will not allow incorrect data to be written.
+
+Next, we perform operations like adding new employee records and updating existing ones, such as changing performance scores. Delta Lake handles these updates safely using transactions.
+
+We also run simple queries like counting total records and finding how many unique cities are present. One important feature is time travel, where we can go back to a previous version of the table before updates. This is useful if something goes wrong and we need to recover old data.
+
+Then we do some advanced analysis by grouping employees by department, collecting performance scores, filtering scores greater than 4, and counting them.
+
+In the second part, we simulate real-time data using Spark streaming. Instead of static data, new employee records are generated continuously and written into the Delta table. We monitor the stream to make sure it is running and query the table to see new data coming in.
+
+Finally, we run analytics like average performance score and employee count by department on the streaming data. At the end, we stop the stream and clean up resources.
+
+Overall, this assignment shows how to build a reliable data pipeline that handles both batch and real-time data using Delta Lake.
+
+
 Part 1: Building Reliable Data Pipelines with Delta Lake
 This homework aims to provide hands-on experience in building and maintaining a reliable
 data pipeline using Delta Lake. The focus will be on key Delta Lake features, such as schema
